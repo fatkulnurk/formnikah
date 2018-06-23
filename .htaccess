@@ -1,0 +1,13 @@
+RewriteEngine On
+#---------------------------------------------------------------------
+# Created By github.com/fatkulnurk
+#---------------------------------------------------------------------
+RewriteRule ^index$  index.html
+RewriteRule ^view/index$  view/index.php
+
+RewriteRule ^bulma.css$ resources/bulma-0.7.0/css/bulma.min.css
+RewriteRule ^logo.png$ resources/images/logo.png
+RewriteRule ^landing.png$ resources/images/landing.png
+
+RewriteCond %{THE_REQUEST} ^GET\ /public/images
+RewriteRule ^images/(.*) /public/images/$1 [L,R=301]
